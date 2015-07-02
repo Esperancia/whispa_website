@@ -334,3 +334,7 @@ form#inscription h2 {
 .contact h1.text-center {
 	margin-top: 3%;
 }
+.ligne
+{
+	text-decoration: underline;
+}
