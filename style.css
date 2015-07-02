@@ -129,11 +129,12 @@ font-weight: bold;
 	color: #FFFFFF;
 	font-size: 24px;
 	padding: 8px 20px;
-	text-align: center;
 	display: inline-block;
 	border: none;
 	line-height: 1;
-	display: inline-block;
+}
+.break .btnRose {
+	margin-top: 8%;
 }
 
 .navbar .container li a {
@@ -213,6 +214,7 @@ h1.header-title{
 .break{
 	margin-top: 96px;
 	margin-bottom: 96px;
+	text-align: center;
 }
 .facebook{
 	color: #3b5998;
@@ -313,7 +315,6 @@ a.btnRose:active{
 	border: 0.5px solid rgba(240, 36, 117, 0.5);
 }
 .control {
-	padding-left: 15%;
 	bottom: -20%;
 }
 
