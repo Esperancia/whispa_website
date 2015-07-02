@@ -13,6 +13,11 @@ img{
 	max-width: 100%;
 	height: auto;
 }
+button,
+button:hover,
+button:active{
+	border: none;
+}
 
 /**/
 @media (min-width: 1200px)
@@ -110,10 +115,10 @@ font-weight: bold;
 	padding: 8px;
 	line-height: 3.5;
 }
-#footer p{
+/*#footer p{
 	text-align: center;
 	color: #000;
-}
+}*/
 #footer i {
 	font-size: 20px;
 	margin-right: 10px;
@@ -123,6 +128,12 @@ font-weight: bold;
 }
 .marge-haut {
 	margin-top: 12px;
+}
+.copyright {
+	margin-right: 10%;
+}
+ul.sociaux {
+	display: inline-block;
 }
 .btnRose{
 	background-color: #F02475;
@@ -333,7 +344,7 @@ h1.header-program {
 	padding: 0 0 20px;
 }
 
-form#inscription h2 {
+form#inscription_form h2 {
 	margin-bottom: 30px;
 }
 .image {
@@ -341,4 +352,7 @@ form#inscription h2 {
 }
 .contact h1.text-center {
 	margin-top: 3%;
+}
+#my_iframe{
+	display: none;
 }
