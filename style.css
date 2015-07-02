@@ -226,7 +226,7 @@ ul.partenaires {
 	font-weight: lighter;
 }
 .contact {
-	margin-top: 15px;
+	margin-top: 3%;
 }
 .btnContact {
 	width: 150px;
@@ -287,13 +287,13 @@ a.btnRose:active{
 }
 #info-envoi{
 	width: 100%;
-	height: 20px;
-	margin-top: 10px;
-	margin-bottom: 30px;
+	height: auto;
+	margin: 10px 0;
 	padding-left: 15px;
 	color: #A71515;
 	font-weight: bold;
 	font-size: 24px;
+	line-height: 2;
 }
 
 .carousel-indicators li{
@@ -329,4 +329,7 @@ form#inscription h2 {
 }
 .image {
 	margin: 26px 0 38px;
+}
+.contact h1.text-center {
+	margin-top: 3%;
 }
