@@ -103,9 +103,9 @@ font-weight: bold;
 	padding: 8px;
 	line-height: 3.5;
 }
-#footer p{
-	text-align: center;
+#footer span{
 	color: #000;
+
 }
 #footer i {
 	font-size: 20px;
@@ -114,8 +114,20 @@ font-weight: bold;
 #footer a{
 	text-decoration: none;
 }
+#footer .col-md-5 ul{
+	display:inline;
+
+}
+#footer .col-md-5{
+	margin-top:6%;
+
+}
+#footer .col-md-3 span {
+	margin-left: 10px;
+}
 .marge-haut {
 	margin-top: 12px;
+
 }
 .btnRose{
 	background-color: #F02475;
@@ -216,9 +228,6 @@ h1.header-title{
 .partenaire{
 	width: 75px;
 	height: 50px;
-}
-ul.partenaires {
-	padding-left: 30px;
 }
 .partenaire-title{
 	padding-left: 40px;
