@@ -59,67 +59,14 @@ function afficherJours() {
   }
 }
 
-// pour formulaire contact
-function postContactToGoogle() {
-    var name = $('#nom').val();
-    var email = $('#email').val();
-    var message = $('#message').val();
-    var info = $('#info-envoi');
-
-    $.ajax({
-        url: "https://docs.google.com/forms/d/1Bo0Gbaa4lKh_ytG1ZQIxSzbdSZWCQ20htZQ2dARlT7g/formResponse",
-        data: {
-            "entry.1896512487": name,
-            "entry.945291491": email,
-            "entry.178754131": message
-        },
-        type: "POST",
-        crossDomain: true,
-        dataType: "xml",
-        statusCode: {
-            0: function () {
-                $('#nom').val("");
-                $('#email').val("");
-                $('#message').val("");
-                info.html("Message bien envoyé!");
-            }
-        }
-    });
-}
-
-
-// pour formulaire inscription
-function Suscription() {
-    // var nom = $('#nom').val();
-    // var sexe = $('#sexe').val();
-    // var email = $('#email').val();
-    // var telephone = $('#email').val();
-    // var message = $('#message').val();
-    var info = $('#info-envoi');
-    var data = {};
-
-    $('#inscription').find('input, select, textarea').each(function () {
-        data[this.getAttribute('name')] = this.value;
-    })
-    console.log("data:", data);
-
-    $.ajax({
-        url: "https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse",
-        data: data,
-        type: "POST",
-        crossDomain: true,
-        dataType: "xml",
-        statusCode: {
-            0: function () {
-                info.text = "Message bien envoyé!";
-
-                $('#inscription').find('input, select, textarea').each(function () {
-                    // this.val("");
-                })
-
-                info.html(info.text);
-
-            }
-        }
-    });
+// pour formulaire
+function postToGoogle() {
+  $('#info-envoi').html("Message bien envoyé!");
+  console.log('insc_form:', $('#inscription_form'), 'contact_form:', $('#contact_form'));
+  if ($('#inscription_form').length > 0){
+    $('#inscription_form')[0].reset();
+  }
+  if ($('#contact_form').length > 0){
+    $('#contact_form')[0].reset();
+  }
 }

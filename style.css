@@ -13,6 +13,11 @@ img{
 	max-width: 100%;
 	height: auto;
 }
+button,
+button:hover,
+button:active{
+	border: none;
+}
 
 /**/
 @media (min-width: 1200px)
@@ -20,6 +25,17 @@ img{
 	width: 1100px;
 }
 /**/
+
+/**/
+@media (min-width: 600px)
+h1.header-title{
+	font-size: 3em;
+}
+/**/
+
+.navbar {
+	margin-bottom: 0;
+}
 
 .form-control {
 	border-radius: 0;
@@ -33,7 +49,6 @@ img{
 #header.inscription {
   background: none;
   height: 0;
-  margin-top: 30px;
 }
 div#header.home{
 	height: 100%;
@@ -56,9 +71,13 @@ div#header.home{
 	color:#F02475;
 }
 
+.home .navbar-default{
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
 .navbar-default{
 	border-bottom: 1px solid rgba(240, 36, 117, 0.2);
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -103,9 +122,10 @@ font-weight: bold;
 	padding: 8px;
 	line-height: 3.5;
 }
-#footer p{
-	text-align: center;
+
+#footer span{
 	color: #000;
+
 }
 #footer i {
 	font-size: 20px;
@@ -114,18 +134,38 @@ font-weight: bold;
 #footer a{
 	text-decoration: none;
 }
+#footer .col-md-5 ul{
+	display:inline;
+
+}
+#footer .col-md-5{
+	margin-top:6%;
+
+}
+#footer .col-md-3 span {
+	margin-left: 10px;
+}
 .marge-haut {
 	margin-top: 12px;
+
+}
+.copyright {
+	margin-right: 10%;
+}
+ul.sociaux {
+	display: inline-block;
 }
 .btnRose{
 	background-color: #F02475;
 	color: #FFFFFF;
 	font-size: 24px;
 	padding: 8px 20px;
-	text-align: center;
 	display: inline-block;
 	border: none;
 	line-height: 1;
+}
+.break .btnRose {
+	margin-top: 8%;
 }
 
 .navbar .container li a {
@@ -160,10 +200,9 @@ hr {
 .container .col-margin{
 	background-color: rgba(255,255,255,0.7);
 	padding: 20px;
-	margin-top: 27%;
-	margin-bottom: 5%;
+	width: 60%;
+	margin: 23% auto 15% auto;
 	min-height: 30%;
-	height: 220px;
 }
 
 .espace {
@@ -192,7 +231,7 @@ h1.header-title{
 	margin-top: 0px;
 	line-height: 1.3;
 	margin-bottom: 20px;
-	font-size: 36px;
+	font-size: 2.5em;
 	font-weight: lighter;
 }
 .col-margin .benefits-title{
@@ -206,6 +245,7 @@ h1.header-title{
 .break{
 	margin-top: 96px;
 	margin-bottom: 96px;
+	text-align: center;
 }
 .facebook{
 	color: #3b5998;
@@ -216,9 +256,6 @@ h1.header-title{
 .partenaire{
 	width: 75px;
 	height: 50px;
-}
-ul.partenaires {
-	padding-left: 30px;
 }
 .partenaire-title{
 	padding-left: 40px;
@@ -306,7 +343,6 @@ a.btnRose:active{
 	border: 0.5px solid rgba(240, 36, 117, 0.5);
 }
 .control {
-	padding-left: 15%;
 	bottom: -20%;
 }
 
@@ -318,14 +354,13 @@ h1.header-program {
 
 .program {
 	background-color: #FFF;
-	padding-top: 60px;
 }
 
 .program .container {
 	padding: 0 0 20px;
 }
 
-form#inscription h2 {
+form#inscription_form h2 {
 	margin-bottom: 30px;
 }
 .image {
@@ -334,6 +369,10 @@ form#inscription h2 {
 .contact h1.text-center {
 	margin-top: 3%;
 }
+#my_iframe{
+	display: none;
+}
+
 .ligne
 {
 	text-decoration: underline;

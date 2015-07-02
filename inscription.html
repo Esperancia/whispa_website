@@ -15,39 +15,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.cycle2.min.js"></script>
-		<script>
-			// pour formulaire inscription
-			function Suscription() {
-        var info = $('#info-envoi');
-        var data = {};
-
-        $('#inscription').find('input, select, textarea').each(function () {
-            data[this.getAttribute('name')] = this.value;
-        })
-        console.log("data:", data);
-
-		    $.ajax({
-		        url: "https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse",
-		        data: data,
-		        type: "POST",
-		        crossDomain: true,
-		        dataType: "xml",
-		        statusCode: {
-		            0: function () {
-		                info.text = "Message bien envoyé!";
-
-		                $('#inscription').find('input, select, textarea').each(function () {
-		                    // this.val("");
-		                })
-
-		                info.html(info.text);
-
-		            }
-		        }
-			    });
-			}
-		</script>
-
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -56,9 +23,9 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div id="header" class="inscription">
+		<div class="page_content">
 			<div id="overlay">
-				<div class="navbar navbar-default navbar-fixed-top">
+				<div class="navbar navbar-default">
           <div class="container">
   					<div class="navbar-header">
 	  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -85,7 +52,8 @@
 			<div class="row">
 				<h1 class="text-center">Inscription &agrave; WHISPA</h1>
 
-					<form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription">
+					<iframe src="" id="my_iframe" name="my_iframe"></iframe>
+					<form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription_form" action="https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse" method="POST" target="my_iframe">
 						<div class="row text-center" id="info-envoi"></div>
 
 						<h2>Informations personnelles</h2>
@@ -95,21 +63,21 @@
 					  </div>
 					  <div class="form-group">
 					    <label for="sexe">Sexe:</label>
-					    <select class="form-control" id="sexe" name="entry.1731768572">
-							  <option value="feminin">Féminin</option>
-							  <option value="masculin">Masculin</option>
+					    <select class="form-control" id="sexe" name="entry.1731768572" required>Choisir
+							  <option value="Féminin">Féminin</option>
+							  <option value="Masculin">Masculin</option>
 							</select>
 					  </div>
 
 					  <div class="form-group">
-					    <label for="age">Date de naissance:</label> <br>
-						   <select name='annee' id='annee' name="entry.315674901_year">
+					    <label for="age">Date de naissance:</label>
+						   <select id='annee' name="entry.315674901_year" required>
 						      <option value='0'>Année</option>
 						    </select>
-						    <select name='mois' id='mois' name="entry.315674901_month">
-					       	<option value='0'>Mois</option>
+						    <select id='mois' name="entry.315674901_month" required>
+						       <option value='0'>Mois</option>
 						   </select>
-						   <select name='jour' id='jour' name="entry.315674901_day">
+						   <select id='jour' name="entry.315674901_day" required>
 						    	<option value='0'>Jour</option>
 						   </select>
 					  </div>
@@ -133,7 +101,7 @@
 						<p>Utilisation des langages de programmation informatiques</p>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.266238509" id="connaissance1" value="Aucune" checked>
+						    <input type="radio" name="entry.266238509" id="connaissance1" value="Aucune">
 						    	Aucune
 						  </label>
 						</div>
@@ -159,7 +127,7 @@
 						<h3>Connaissances digitales</h3>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1349124608" id="Webmarketing" value="Webmarketing" checked>
+						    <input type="radio" name="entry.1349124608" id="Webmarketing" value="Webmarketing">
 						    	Digital Marketing
 						  </label>
 						</div>
@@ -177,7 +145,7 @@
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1349124608" id="Autres" value="Autres">
+						    <input type="radio" name="entry.1349124608" id="Autres" value="__other_option__">
 						    Autre
 					    	<input type="text" name="entry.1349124608.other_option_response" id="Autres"/>
 						  </label>
@@ -186,13 +154,13 @@
 						<h3>Connaissances design</h3>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1757553698" id="Graphique" value="Graphique" checked>
+						    <input type="radio" name="entry.1757553698" id="Graphique" value="Design graphique">
 						    	Design graphique
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1757553698" id="Infographique" value="Infographique">
+						    <input type="radio" name="entry.1757553698" id="Infographique" value="Design Infographique">
 						    	Design infographique
 						  </label>
 						</div>
@@ -204,13 +172,13 @@
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1757553698" id="UI_Webdesign" value="UI_Webdesign">
+						    <input type="radio" name="entry.1757553698" id="UI_Webdesign" value="UI Webdesign">
 						    	UI Webdesign
 						  </label>
 						</div>
 						<div class="radio">
 					    	<label>
-					    		<input type="radio" name="entry.1757553698" id="Autres" value="Autres">
+					    		<input type="radio" name="entry.1757553698" id="Autres" value="__other_option__">
 						    	Autre
 						    	<input type="text" name="entry.1757553698.other_option_response" id="Autres"/>
 						    </label>
@@ -220,7 +188,7 @@
 						<h2>Motivations</h2>
 					  <div class="form-group">
 					    <label for="raison">Dites-nous en quelques mots pourquoi voulez-vous participer à ce programme:</label><br>
-					    <textarea ame="entry.1249162603" id="raison" class="form-control"></textarea>
+					    <textarea name="entry.1249162603" id="raison" class="form-control"></textarea>
 					  </div>
 					  <div class="form-group">
 					    <label for="fascinant">Qu'avez-vous appris de fascinant récemment?</label><br>
@@ -230,8 +198,8 @@
 					    <label for="avenir">Où vous imaginez-vous dans deux ans?</label><br>
 					    <textarea name="entry.1205715919" id="avenir" class="form-control"></textarea>
 					  </div>
-						<p class="pull-left">
-				  		<a class="btnRose btnContact" onclick="Suscription()">Envoyer</a>
+						<p>
+				  		<button class="btnRose btnContact" type="submit" onclick="postToGoogle()">Envoyer</button>
 					  </p>
 					</form>
 
@@ -242,29 +210,22 @@
 
 		<div id="footer" class="container-fluid">
 			<div class="container">
-				<div class="row"><span class="col-md-3 pull-right partenaire-title">Partenaires:</span></div>
-				<div class="row">
-					<div class="col-md-3 marge-haut">
-						<p class="copyright">&copy; 2015, WHISPA. All rights reserved.</p>
+				
+				<div class="row marge-haut">
+					<div class="col-md-3 col-md-push-9">
+
+						<span>Partenaires:</span>
+						<ul class="partenaires">
+  						<li><a href="http://www.tekxl.com/"><img class="partenaire" src="img/tekxl.png" alt="Tekxl LLC"></a></li>
+  						<li><a href="http://www.etrilabs.com/"><img class="partenaire" src="img/etrilabs.png" alt="Etrilabs"></a></li>
+  						</ul>
 					</div>
-					<div class="col-md-2 marge-haut">
+					<div class="col-md-5 col-md-pull-3">
+						<span class="copyright">&copy; 2015, WHISPA. All rights reserved.</span>
 						<ul>
   						<li><a href="https://www.facebook.com/whispaBenin"><i class="icon-facebook-2 facebook"></i></a></li>
   						<li><a href="https://twitter.com/whispabenin"><i class="icon-twitter-2 twitter"></i></a></li>
-  					</ul>
-
-					</div>
-					<div class="col-md-3 pull-right">
-						<div class="row">
-
-							<ul class="partenaires">
-	  						<li><a href="http://www.tekxl.com/"><img class="partenaire" src="img/tekxl.png" alt="Tekxl LLC"></a>
-	  						</li>
-	  						<li><a href="http://www.etrilabs.com/"><img class="partenaire" src="img/etrilabs.png" alt="Etrilabs">
-	  						</a></li>
   						</ul>
-
-						</div>
 					</div>
 				</div>
 			</div><!--footer container-->
