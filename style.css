@@ -33,6 +33,10 @@ h1.header-title{
 }
 /**/
 
+.navbar {
+	margin-bottom: 0;
+}
+
 .form-control {
 	border-radius: 0;
 }
@@ -45,7 +49,6 @@ h1.header-title{
 #header.inscription {
   background: none;
   height: 0;
-  margin-top: 30px;
 }
 div#header.home{
 	height: 100%;
@@ -68,9 +71,13 @@ div#header.home{
 	color:#F02475;
 }
 
-.navbar-default{
+.home .navbar-default{
 	border-bottom: 1px solid rgba(240, 36, 117, 0.2);
 	background-color: rgba(255, 255, 255, 0.7);
+}
+.navbar-default{
+	border-bottom: 1px solid rgba(240, 36, 117, 0.2);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -337,7 +344,6 @@ h1.header-program {
 
 .program {
 	background-color: #FFF;
-	padding-top: 60px;
 }
 
 .program .container {
