@@ -21,6 +21,13 @@ img{
 }
 /**/
 
+/**/
+@media (min-width: 600px)
+h1.header-title{
+	font-size: 3em;
+}
+/**/
+
 .form-control {
 	border-radius: 0;
 }
@@ -126,6 +133,7 @@ font-weight: bold;
 	display: inline-block;
 	border: none;
 	line-height: 1;
+	display: inline-block;
 }
 
 .navbar .container li a {
@@ -160,10 +168,9 @@ hr {
 .container .col-margin{
 	background-color: rgba(255,255,255,0.7);
 	padding: 20px;
-	margin-top: 27%;
-	margin-bottom: 5%;
+	width: 60%;
+	margin: 23% auto 15% auto;
 	min-height: 30%;
-	height: 220px;
 }
 
 .espace {
@@ -192,7 +199,7 @@ h1.header-title{
 	margin-top: 0px;
 	line-height: 1.3;
 	margin-bottom: 20px;
-	font-size: 36px;
+	font-size: 2.5em;
 	font-weight: lighter;
 }
 .col-margin .benefits-title{

@@ -111,13 +111,13 @@ function Suscription() {
         dataType: "xml",
         statusCode: {
             0: function () {
-                info.text = "Message bien envoyé!";
 
                 $('#inscription').find('input, select, textarea').each(function () {
-                    // this.val("");
+
                 })
 
-                info.html(info.text);
+                info.html("Message bien envoyé!");
+                console.log('ok');
 
             }
         }

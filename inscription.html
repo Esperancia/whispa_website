@@ -15,39 +15,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.cycle2.min.js"></script>
-		<script>
-			// pour formulaire inscription
-			function Suscription() {
-        var info = $('#info-envoi');
-        var data = {};
-
-        $('#inscription').find('input, select, textarea').each(function () {
-            data[this.getAttribute('name')] = this.value;
-        })
-        console.log("data:", data);
-
-		    $.ajax({
-		        url: "https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse",
-		        data: data,
-		        type: "POST",
-		        crossDomain: true,
-		        dataType: "xml",
-		        statusCode: {
-		            0: function () {
-		                info.text = "Message bien envoyé!";
-
-		                $('#inscription').find('input, select, textarea').each(function () {
-		                    // this.val("");
-		                })
-
-		                info.html(info.text);
-
-		            }
-		        }
-			    });
-			}
-		</script>
-
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -103,13 +70,13 @@
 
 					  <div class="form-group">
 					    <label for="age">Date de naissance:</label>
-						   <select name='annee' id='annee' name="entry.315674901_year">
+						   <select id='annee' name="entry.315674901_year">
 						      <option value='0'>Année</option>
 						    </select>
-						    <select name='mois' id='mois' name="entry.315674901_month">
+						    <select id='mois' name="entry.315674901_month">
 						       <option value='0'>Mois</option>
 						   </select>
-						   <select name='jour' id='jour' name="entry.315674901_day">
+						   <select id='jour' name="entry.315674901_day">
 						    	<option value='0'>Jour</option>
 						   </select>
 					  </div>
