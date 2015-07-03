@@ -19,31 +19,10 @@ button:active{
 	border: none;
 }
 
-/**/
-@media (min-width: 1200px){
-	.container {
-		width: 1100px;
-	}
-}
-
-/**/
-@media (min-width: 600px){
-	h1.header-title{
-		font-size: 3em;
-	}
-}
-/**/
-
 .navbar {
 	margin-bottom: 0;
 }
 
-@media (max-width:768px) {
-	.container-fluid .carousel-inner blockquote {
-		font-size:14px;
-
-	}
-}
 .form-control {
 	border-radius: 0;
 }
@@ -125,45 +104,6 @@ div#header.home{
 	margin: 30px 0;
 }
 
-#footer{
-	border-top: 1px solid rgba(240, 36, 117, 0.2);
-	height: 60px;
-	padding: 8px;
-	line-height: 3.5;
-}
-
-#footer span{
-	color: #000;
-
-}
-#footer i {
-	font-size: 20px;
-	margin-right: 10px;
-}
-#footer a{
-	text-decoration: none;
-}
-#footer .col-md-5 ul{
-	display:inline;
-
-}
-#footer .col-md-5{
-	margin-top:6%;
-
-}
-#footer .col-md-3 span {
-	margin-left: 10px;
-}
-.marge-haut {
-	margin-top: 12px;
-
-}
-.copyright {
-	margin-right: 10%;
-}
-ul.sociaux {
-	display: inline-block;
-}
 .btnRose{
 	background-color: #F02475;
 	color: #FFFFFF;
@@ -234,18 +174,18 @@ span.fa.fa-quote-left {
 .img_desc{
 
 }
-h1.header-title{
+h1.header-title {
 	margin-top: 0px;
 	line-height: 1.3;
 	margin-bottom: 20px;
 	font-size: 2.5em;
 	font-weight: lighter;
 }
-.col-margin .benefits-title{
+.col-margin .benefits-title {
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
-.benefits-title{
+.benefits-title {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
@@ -379,7 +319,78 @@ form#inscription_form h2 {
 #my_iframe{
 	display: none;
 }
-.ligne
-{
+.ligne {
 	text-decoration: underline;
+}
+
+/************************************
+ * Footer
+ ************************************/
+
+#footer {
+	border-top: 1px solid rgba(240, 36, 117, 0.2);
+	padding: 10px 0 20px;
+	line-height: 3.5;
+}
+#footer span {
+	color: #000;
+}
+#footer i {
+	font-size: 20px;
+	margin-right: 10px;
+}
+#footer #copyright {
+	margin-top: 4%;
+}
+
+#footer a {
+	text-decoration: none;
+}
+#footer ul {
+	padding: 0;
+	margin: 0;
+}
+#footer .sociaux,
+#footer li {
+	display: inline-block;
+}
+#footer .sociaux {
+	padding-left: 20px;
+}
+#footer #partner span {
+	padding: 0 0 0 10px;
+}
+
+
+/************************************
+ * Media Queries
+ ************************************/
+
+@media (min-width: 767px) {
+	h1.header-title {
+		font-size: 3em;
+	}
+	#partner {
+		float: right;
+		max-width: 190px;
+	}
+}
+
+@media (max-width:768px) {
+	h1.header-title {
+		font-size: 2.2em;
+	}
+	#footer {
+		text-align: center;
+	}
+	.container-fluid .carousel-inner blockquote {
+		font-size: 14px;
+	}
+	.partner-title,
+	.partner-logo {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 1200px) {
 }
