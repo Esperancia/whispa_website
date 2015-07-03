@@ -51,11 +51,10 @@
 		<div class="container contact">
 			<div class="row">
 				<h1 class="text-center">Inscription &agrave; WHISPA</h1>
-
+					<div class="row text-center" id="info-envoi"></div>
 					<iframe src="" id="my_iframe" name="my_iframe"></iframe>
-					<form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription_form" action="https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse" method="POST" target="my_iframe">
-						<div class="row text-center" id="info-envoi"></div>
-
+					<form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription_form" action="https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse" method="POST" target="my_iframe" onsubmit="postRegisterToGoogle()">
+			
 						<h2>Informations personnelles</h2>
 					  <div class="form-group">
 					    <label for="name">Nom et prénoms:</label>
@@ -88,12 +87,12 @@
 					  </div>
 					  <div class="form-group">
 					    <label for="email">Email:</label>
-					    <input type="email" class="form-control" id="email" name="entry.1619800715" placeholder="Email" required>
+					    <input type="email" class="form-control" id="email" name="entry.1619800715" placeholder="Email" data-parsley-trigger="change" required>
 					  </div>
 
 					  <div class="form-group">
 					    <label for="niveau">Niveau d'étude ou profession:</label><br>
-					    <textarea name="entry.1768188565" id="niveau" class="form-control"></textarea>
+					    <textarea name="entry.1768188565" id="niveau" class="form-control" ></textarea>
 					  </div>
 						<br>
 
@@ -101,19 +100,19 @@
 						<p>Utilisation des langages de programmation informatiques</p>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.266238509" id="connaissance1" value="Aucune">
+						    <input type="radio" name="entry.266238509" id="connaissance11" value="Aucune">
 						    	Aucune
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.266238509" id="connaissance2" value="Basique">
+						    <input type="radio" name="entry.266238509" id="connaissance12" value="Basique">
 						    	Basique
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.266238509" id="connaissance3" value="Professionnelle">
+						    <input type="radio" name="entry.266238509" id="connaissance13" value="Professionnelle">
 						    	Professionnelle
 						  </label>
 						</div>
@@ -127,60 +126,60 @@
 						<h3>Connaissances digitales</h3>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1349124608" id="Webmarketing" value="Webmarketing">
+						    <input type="radio" name="entry.1349124608" id="connaissance21" value="Webmarketing">
 						    	Digital Marketing
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1349124608" id="Social" value="Social Media Marketing">
+						    <input type="radio" name="entry.1349124608" id="connaissance22" value="Social Media Marketing">
 						    	Social Media Marketing
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1349124608" id="Community" value="Community management">
+						    <input type="radio" name="entry.1349124608" id="connaissance23" value="Community management">
 						    	Community Management
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1349124608" id="Autres" value="__other_option__">
-						    Autre
-					    	<input type="text" name="entry.1349124608.other_option_response" id="Autres"/>
+						    <input type="radio" name="entry.1349124608" id="connaissance24" value="__other_option__">
+						    Autres
+					    	<input type="text" name="entry.1349124608.other_option_response" id="connaissance2a"/>
 						  </label>
 						</div>
 
 						<h3>Connaissances design</h3>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1757553698" id="Graphique" value="Design graphique">
+						    <input type="radio" name="entry.1757553698" id="connaissance31" value="Design graphique">
 						    	Design graphique
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1757553698" id="Infographique" value="Design Infographique">
+						    <input type="radio" name="entry.1757553698" id="connaissance32" value="Design Infographique">
 						    	Design infographique
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1757553698" id="Webdesign" value="Webdesign">
+						    <input type="radio" name="entry.1757553698" id="connaissance33" value="Webdesign">
 						    	Webdesign
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.1757553698" id="UI_Webdesign" value="UI Webdesign">
+						    <input type="radio" name="entry.1757553698" id="connaissance34" value="UI Webdesign">
 						    	UI Webdesign
 						  </label>
 						</div>
 						<div class="radio">
 					    	<label>
-					    		<input type="radio" name="entry.1757553698" id="Autres" value="__other_option__">
-						    	Autre
-						    	<input type="text" name="entry.1757553698.other_option_response" id="Autres"/>
+					    		<input type="radio" name="entry.1757553698" id="connaissance35" value="__other_option__">
+						    	Autres
+						    	<input type="text" name="entry.1757553698.other_option_response" id="connaissance3a"/>
 						    </label>
 						</div>
 						<br>

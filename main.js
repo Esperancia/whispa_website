@@ -61,12 +61,66 @@ function afficherJours() {
 
 // pour formulaire
 function postToGoogle() {
-  $('#info-envoi').html("Message bien envoyé!");
-  console.log('insc_form:', $('#inscription_form'), 'contact_form:', $('#contact_form'));
+  var valid = true;
+
+  // formulaire inscription
   if ($('#inscription_form').length > 0){
-    $('#inscription_form')[0].reset();
+    $('#inscription_form').find("input", "textarea").each(
+      function(i, elm){
+        if (elm.value === ""){
+          if ((elm.id !== "langages")
+          &&  (elm.id !== "connaissance2a")
+          &&  (elm.id !== "connaissance3a")){
+            console.log(elm);
+            valid = false;
+          }
+        }
+      }
+    );
+
+    console.log(valid);
+    valid=valid && postRegisterToGoogle();
+    console.log(valid);
+
+    if (valid){
+      $('#info-envoi').html("Message bien envoyé!");
+      $('#inscription_form').hide();
+    }
   }
+
+  // formulaire contact
   if ($('#contact_form').length > 0){
-    $('#contact_form')[0].reset();
+    $('#contact_form').find("input", "textarea").each(
+      function(i, elm){
+        if (elm.value === ""){
+          valid = false;
+        }
+      }
+    );
+
+    if (valid){
+      $('#info-envoi').html("Message bien envoyé!");
+      $('#contact_form')[0].reset();
+    }
   }
+
+}
+
+function postRegisterToGoogle() {
+  if(! $('#connaissance11').prop("checked") &&
+    $('#langages').val().trim() === "") {
+      return false;
+  }
+
+  if($('#connaissance24').prop("checked") &&
+    $('#connaissance2a').val().trim() === "") {
+      return false;
+  }
+
+  if($('#connaissance35').prop("checked") &&
+    $('#connaissance3a').val().trim() === "") {
+      return false;
+  }
+
+  return true;
 }
