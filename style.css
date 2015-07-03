@@ -7,7 +7,7 @@ label{
 }
 blockquote {
 	border: none;
-	margin-left: 10px;
+	padding: 10px;
 }
 img{
 	max-width: 100%;
@@ -20,16 +20,17 @@ button:active{
 }
 
 /**/
-@media (min-width: 1200px)
-.container {
-	width: 1100px;
+@media (min-width: 1200px){
+	.container {
+		width: 1100px;
+	}
 }
-/**/
 
 /**/
-@media (min-width: 600px)
-h1.header-title{
-	font-size: 3em;
+@media (min-width: 600px){
+	h1.header-title{
+		font-size: 3em;
+	}
 }
 /**/
 
@@ -37,6 +38,12 @@ h1.header-title{
 	margin-bottom: 0;
 }
 
+@media (max-width:768px) {
+	.container-fluid .carousel-inner blockquote {
+		font-size:14px;
+
+	}
+}
 .form-control {
 	border-radius: 0;
 }
@@ -175,7 +182,7 @@ ul.sociaux {
 }
 
 #slide{
-	height: 200px;
+
 }
 .container h1{
 	line-height: 1.5;
@@ -184,7 +191,7 @@ ul.sociaux {
 	color:#F02475;
 }
 .fa-quote-left{
-	font-size:50px;
+	font-size:40px;
 }
 
 hr {
@@ -220,8 +227,8 @@ span.glyphicon.glyphicon-ok {
 }
 
 span.fa.fa-quote-left {
-	font-size: 30px;
-	margin-left: 30px;
+	font-size: 20px;
+	margin-left: 10px;
 }
 
 .img_desc{
@@ -371,4 +378,8 @@ form#inscription_form h2 {
 }
 #my_iframe{
 	display: none;
+}
+.ligne
+{
+	text-decoration: underline;
 }
