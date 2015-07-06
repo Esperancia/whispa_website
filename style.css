@@ -383,6 +383,9 @@ form#inscription_form h2 {
 	#about .img_desc{
 		width: 100%;
 	}
+	.container #footer .row{
+		margin:0;
+	}
 }
 
 @media (max-width:768px) {
@@ -399,6 +402,10 @@ form#inscription_form h2 {
 	.partner-logo {
 		display: inline-block;
 	}
+	#about .img_desc{
+		width: 100%;
+	}
+	
 }
 
 @media (min-width: 1200px) {
