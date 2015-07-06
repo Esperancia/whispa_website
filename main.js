@@ -99,8 +99,9 @@ function postToGoogle() {
     );
 
     if (valid){
+      // $('#contact_form')[0].reset();
+      $('#contact_form').hide();
       $('#info-envoi').html("Message bien envoyé!");
-      $('#contact_form')[0].reset();
     }
   }
 
