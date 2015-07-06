@@ -98,9 +98,11 @@ function postToGoogle() {
         }
       }
     );
-       if (valid){
-      $('#info-envoi').html("Votre Message a été envoyée");
+
+    if (valid){
+      // $('#contact_form')[0].reset();
       $('#contact_form').hide();
+      $('#info-envoi').html("Votre Message a été envoyée.");
     }
   }
 
