@@ -236,9 +236,6 @@ h1.header-title {
 .btnContact:active {
 	color: #fff;
 }
-.underlined{
-	font-weight: bold;
-}
 h2.underlined{
 	color: #000;
 	font-weight: normal;
