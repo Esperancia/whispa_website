@@ -281,7 +281,10 @@ a.btnRose:active{
 	height: auto;
 	margin: 10px 0;
 	padding-left: 15px;
-    line-height: 2;
+	color: #A71515;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 2;
 }
 
 .carousel-indicators li{
@@ -377,8 +380,8 @@ form#inscription_form h2 {
 		float: right;
 		max-width: 190px;
 	}
-	#benefits .col-margin{
-		margin:auto;
+	#about .img_desc{
+		width: 100%;
 	}
 }
 
