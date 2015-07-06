@@ -83,7 +83,7 @@ function postToGoogle() {
     console.log(valid);
 
     if (valid){
-      $('#info-envoi').html("Votre inscription a été enregistrée. Nous vous contacterons bientô");
+      $('#info-envoi').html("Votre inscription a été enregistrée. Nous vous contacterons bientôt.");
       $('#inscription_form').hide();
     }
   }
@@ -102,7 +102,7 @@ function postToGoogle() {
     if (valid){
       // $('#contact_form')[0].reset();
       $('#contact_form').hide();
-      $('#info-envoi').html("Votre Message a été envoyée.");
+      $('#info-envoi').html("Votre message a été envoyé.");
     }
   }
 
@@ -112,6 +112,7 @@ function postRegisterToGoogle() {
   if(! $('#connaissance11').prop("checked") &&
     $('#langages').val().trim() === "") {
       return false;
+    /*verifconnaissance11()*/
   }
 
   if($('#connaissance24').prop("checked") &&
@@ -126,3 +127,19 @@ function postRegisterToGoogle() {
 
   return true;
 }
+/*function verifconnaissance11(){  
+var connaissance11= document.inscription_form.connaissance11;  
+var string = connaissance11.value;  
+var nbrlettre = string.length;  
+var labconnaissance11= document.getElementById("connaissance11");  
+if (nbrlettre < 2) {  
+ connaissance11.style.borderColor="red";  
+ labconnaissance11.style.color="red";  
+ return false;  
+}  
+else {  
+ connaissance11.style.border="1px solid #090";  
+ labconnaissance11.style.color="#6197b2";  
+return true;  
+
+}  */
