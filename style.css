@@ -13,6 +13,15 @@ img{
 	max-width: 100%;
 	height: auto;
 }
+a{
+	color:#F02475;
+}
+a:hover,
+a:active {
+	color:#F02475;
+	text-decoration: underline;
+}
+
 button,
 button:hover,
 button:active{
@@ -68,11 +77,13 @@ div#header.home{
 	border-radius: 0;
 }
 
+/*
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:active {
 	color:#F02475;
 	text-decoration: underline;
 }
+*/
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand a,
@@ -113,6 +124,11 @@ div#header.home{
 	border: none;
 	line-height: 1;
 }
+
+#testimonials .break .btnRose {
+margin-top: 8%;
+}
+
 .navbar .container li a {
 	color: #f02475;
 }
@@ -123,7 +139,7 @@ div#header.home{
 .container h1{
 	line-height: 1.5;
 }
-.rose ,.glyphicon-ok,.fa-quote-left{
+.glyphicon-ok,.fa-quote-left{
 	color:#F02475;
 }
 .fa-quote-left{
@@ -143,7 +159,7 @@ hr {
 .container .col-margin{
 	background-color: rgba(255,255,255,0.7);
 	padding: 20px;
-	width: 60%;
+	width: 66%;
 	margin: 23% auto 15% auto;
 	min-height: 30%;
 }
