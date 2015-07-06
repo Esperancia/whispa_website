@@ -83,7 +83,7 @@ function postToGoogle() {
     console.log(valid);
 
     if (valid){
-      $('#info-envoi').html("Message bien envoyé!");
+      $('#info-envoi').html("Votre inscription a été enregistrée. Nous vous contacterons bientô");
       $('#inscription_form').hide();
     }
   }
@@ -93,14 +93,14 @@ function postToGoogle() {
     $('#contact_form').find("input", "textarea").each(
       function(i, elm){
         if (elm.value === ""){
+          console.log(elm);
           valid = false;
         }
       }
     );
-
-    if (valid){
-      $('#info-envoi').html("Message bien envoyé!");
-      $('#contact_form')[0].reset();
+       if (valid){
+      $('#info-envoi').html("Votre Message a été envoyée");
+      $('#contact_form').hide();
     }
   }
 
