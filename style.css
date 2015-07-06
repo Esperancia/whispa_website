@@ -173,8 +173,9 @@ ul.sociaux {
 	border: none;
 	line-height: 1;
 }
-.break .btnRose {
-	margin-top: 8%;
+
+#testimonials .break .btnRose {
+margin-top: 8%;
 }
 
 .navbar .container li a {
