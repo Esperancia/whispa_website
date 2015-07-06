@@ -380,6 +380,9 @@ form#inscription_form h2 {
 		float: right;
 		max-width: 190px;
 	}
+	#benefits .col-margin{
+		margin:auto;
+	}
 }
 
 @media (max-width:768px) {
