@@ -104,6 +104,11 @@ div#header.home{
 	font-size: 18px;
 
 }
+.collapse ul a{
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 15px;
+}
 .cta {
 	text-align: center;
 	margin: 30px 0;
@@ -273,8 +278,11 @@ a.btnRose:active{
 	cursor: pointer;
 }
 
+/*.program .btnRose {
+	margin-top: 20px;
+}*/
 .program p.pull-right {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 #info-envoi{
 	width: 100%;
@@ -307,10 +315,6 @@ h1.header-program {
 
 .program {
 	background-color: #FFF;
-}
-
-.program .container {
-	padding: 0 0 20px;
 }
 
 form#inscription_form h2 {
@@ -372,7 +376,7 @@ form#inscription_form h2 {
  * Media Queries
  ************************************/
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 	h1.header-title {
 		font-size: 3em;
 	}
@@ -383,12 +387,19 @@ form#inscription_form h2 {
 	#about .img_desc{
 		width: 100%;
 	}
+
 	.container #footer .row{
 		margin:0;
 	}
+	.program .container .btnRose{
+		margin-top: 20px;
+		float: right;
+	}
+
+
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
 	h1.header-title {
 		font-size: 2.2em;
 	}
@@ -407,6 +418,29 @@ form#inscription_form h2 {
 	}
 	
 }
+@media (min-width:320px) and (max-width:480px) {
+
+		.program .header-program {
+		font-size:1.2sem;
+	}
+	.program .container .btnRose{
+		margin-bottom: 10px;
+	}
+
+	#overlay .col-margin{
+		
+		width:300px;
+		
+	}
+	.program .btnRose {
+		font-size:1em;
+		width: 100%;
+	}
+
+
+
+	}
+
 
 @media (min-width: 1200px) {
 }
