@@ -285,13 +285,8 @@ a.btnRose:active{
 	margin-top: 30px;
 }
 #info-envoi{
-	width: 100%;
 	height: auto;
 	margin: 10px 0;
-	padding-left: 15px;
-	color: #A71515;
-	font-weight: bold;
-	font-size: 24px;
 	line-height: 2;
 }
 
