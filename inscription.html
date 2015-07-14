@@ -15,6 +15,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.cycle2.min.js"></script>
+		<link href="css/parsley.css" rel="stylesheet"/>
+		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -53,18 +55,12 @@
 				<h1 class="text-center">Inscription &agrave; WHISPA</h1>
 					<div class="row text-center" id="info-envoi"></div>
 					<iframe src="" id="my_iframe" name="my_iframe"></iframe>
-					<form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription_form" action="https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse" method="POST" target="my_iframe" onsubmit="postRegisterToGoogle()">
+					<form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription_form" action="https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse" method="POST" target="my_iframe" data-parsley-validate>
 
 						<h2>Informations personnelles</h2>
 					  <div class="form-group">
 					    <label for="name">Nom et prénoms:</label>
 					    <input type="text" class="form-control" id="nom" name="entry.491471038" required>
-					  </div>
-					  <div class="form-group">
-					    <label for="sexe">Sexe:</label>
-					    <select class="form-control" id="sexe" name="entry.1731768572" required>Choisir
-							  <option value="Féminin">Féminin</option>
-							</select>
 					  </div>
 
 					  <div class="form-group">
@@ -91,7 +87,7 @@
 
 					  <div class="form-group">
 					    <label for="niveau">Niveau d'étude ou profession:</label><br>
-					    <textarea name="entry.1768188565" id="niveau" class="form-control" ></textarea>
+					    <textarea name="entry.1768188565" id="niveau" class="form-control" required></textarea>
 					  </div>
 						<br>
 
@@ -105,13 +101,13 @@
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.266238509" id="connaissance12" value="Basique">
+						    <input type="radio" name="entry.266238509" id="connaissance12" value="Basique" required>
 						    	Basique
 						  </label>
 						</div>
 						<div class="radio">
 						  <label>
-						    <input type="radio" name="entry.266238509" id="connaissance13" value="Professionnelle">
+						    <input type="radio" name="entry.266238509" id="connaissance13" value="Professionnelle" required>
 						    	Professionnelle
 						  </label>
 						</div>
@@ -119,7 +115,7 @@
 
 					  <div class="form-group">
 					    <label for="niveau">Précisez les langages de programmation si vous en utilisez:</label><br>
-					    <textarea name="entry.1884926527" id="langages" class="form-control"></textarea>
+					    <textarea name="entry.1884926527" id="langages" class="form-control" data-parsley-conditionaldifrequired='["[name=\"entry.266238509\"]:checked", "Aucune"]' data-parsley-validate-if-empty data-parsley-success-class="" data-parsley-conditionaldifrequired-message="Ce champ est requis"></textarea>
 					  </div>
 
 						<label>Connaissances digitales</label>
@@ -145,7 +141,7 @@
 						  <label>
 						    <input type="radio" name="entry.1349124608" id="connaissance24" value="__other_option__">
 						    Autres
-					    	<input type="text" name="entry.1349124608.other_option_response" id="connaissance2a"/>
+					    	<input type="text" name="entry.1349124608.other_option_response" id="connaissance2a" data-parsley-conditionalrequired='["[name=\"entry.1349124608\"]:checked", "__other_option__"]' data-parsley-validate-if-empty data-parsley-success-class="" data-parsley-conditionalrequired-message="ce champ est requis" />
 						  </label>
 						</div>
 
@@ -178,7 +174,7 @@
 					    	<label>
 					    		<input type="radio" name="entry.1757553698" id="connaissance35" value="__other_option__">
 						    	Autres
-						    	<input type="text" name="entry.1757553698.other_option_response" id="connaissance3a"/>
+						    	<input type="text" name="entry.1757553698.other_option_response" id="connaissance3a" data-parsley-conditionalrequired='["[name=\"entry.1757553698\"]:checked", "__other_option__"]' data-parsley-validate-if-empty data-parsley-success-class="" data-parsley-conditionalrequired-message="ce champ est requis" />
 						    </label>
 						</div>
 						<br>
@@ -186,18 +182,18 @@
 						<h2>Motivations</h2>
 					  <div class="form-group">
 					    <label for="raison">Dites-nous en quelques mots pourquoi vous voulez participer à ce programme:</label><br>
-					    <textarea name="entry.1249162603" id="raison" class="form-control"></textarea>
+					    <textarea name="entry.1249162603" id="raison" class="form-control" required></textarea>
 					  </div>
 					  <div class="form-group">
 					    <label for="fascinant">Qu'avez-vous appris de fascinant récemment?</label><br>
-					    <textarea name="entry.1216302795" id="fascinant" class="form-control"></textarea>
+					    <textarea name="entry.1216302795" id="fascinant" class="form-control" required></textarea>
 					  </div>
 					  <div class="form-group">
 					    <label for="avenir">Où vous imaginez-vous dans deux ans?</label><br>
-					    <textarea name="entry.1205715919" id="avenir" class="form-control"></textarea>
+					    <textarea name="entry.1205715919" id="avenir" class="form-control" required></textarea>
 					  </div>
 						<p>
-				  		<button class="btnRose btnContact" type="submit" onclick="postToGoogle()">Envoyer</button>
+				  		<button class="btnRose btnContact" type="submit">Envoyer</button>
 					  </p>
 					</form>
 
@@ -234,6 +230,33 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="js/site/annee.js"></script>
+		<script type="text/javascript">
+			window.ParsleyConfig = {
+			  validators: {
+			    conditionaldifrequired: {
+			        fn: function (value, requirements) {
+			          if (requirements[1] !== $(requirements[0]).val() && '' == value)
+			          	return false;
+
+			          return true;
+			        },
+			        priority: 30
+			    },
+			    conditionalrequired: {
+			        fn: function (value, requirements) {
+			          if (requirements[1] == $(requirements[0]).val() && '' == value)
+			          	return false;
+
+			          return true;
+			        },
+			        priority: 32
+			    },
+			  }
+			};
+		</script>
+		<script src="js/parsley.js"></script>
+		<script type="text/javascript" src="js/site/inscription.js"></script>
+		<script src="js/i18n/fr.js"></script>
 	</body>
 </html>

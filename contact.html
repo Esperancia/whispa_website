@@ -13,9 +13,12 @@
 		<link href="css/icomoon.css" rel="stylesheet">
 		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.cycle2.min.js"></script>
-		<script type="text/javascript" src="main.js"></script>
+		<link href="css/parsley.css" rel="stylesheet"/>
+		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -45,7 +48,7 @@
           	</div>
           </div>
 				</div><!--fin navbar-->
-					
+
 			<div class="program">
 					<div class="container">
 						<div class="row">
@@ -66,8 +69,8 @@
 			<div class="row">
 				<div class="col-md-5">
 					<h2 class="underlined">Nos Coordonnées</h2>
-					<p>Etrilabs, TEKXL</p>
-						<p> Maison 158 Rue 2348A Fidjrossè, Cotonou
+					<p>Etrilabs</p>
+						<p>Rue 2348A Fidjrossè, Cotonou
 						<br> (Rue en face de l’Eglise Catholique
 						<br> St Francois D’Assise,
 						<br> ensuite 4e rue à gauche)
@@ -81,7 +84,7 @@
 					<h2 class="underlined">Nous Contacter</h2>
 					<iframe src="" id="my_iframe" name="my_iframe"></iframe>
 					<div class="row" id="info-envoi"></div>
-					<form action="https://docs.google.com/forms/d/1Bo0Gbaa4lKh_ytG1ZQIxSzbdSZWCQ20htZQ2dARlT7g/formResponse" target="my_iframe" method="POST" id="contact_form">
+					<form action="https://docs.google.com/forms/d/1Bo0Gbaa4lKh_ytG1ZQIxSzbdSZWCQ20htZQ2dARlT7g/formResponse" target="my_iframe" method="POST" id="contact_form" data-parsley-validate>
 						<div class="row">
 							<div class="col-md-8">
 								<div class="form-group">
@@ -108,7 +111,7 @@
 						</div>
 						<p>
 							<!--a class="btnRose btnContact" onclick="postContactToGoogle()"> Envoyer </a-->
-							<button class="btnRose btnContact" type="submit" onclick="postToGoogle()">Envoyer</button>
+							<button class="btnRose btnContact" type="submit" >Envoyer</button>
 						</p>
 					</form>
 				</div>
@@ -142,7 +145,8 @@
 			</div><!--footer container-->
 		</div><!--footer-->
 		<!-- Bootstrap core JavaScript -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/bootstrap.js"></script>
+		<script src="js/parsley.js"></script>
+		<script type="text/javascript" src="js/site/contact.js"></script>
+		<script src="js/i18n/fr.js"></script>
 	</body>
 </html>
