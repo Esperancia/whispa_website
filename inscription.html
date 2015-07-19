@@ -229,36 +229,7 @@
 			</div><!--footer container-->
 		</div><!--footer-->
 		<!-- Bootstrap core JavaScript -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/site/annee.js"></script>
-		<script type="text/javascript">
-			window.ParsleyConfig = {
-			  validators: {
-			    conditionaldifrequired: {
-			        fn: function (value, requirements) {
-			          if (requirements[1] !== $(requirements[0]).val() && '' == value)
-			          	return false;
-
-			          return true;
-			        },
-			        priority: 30
-			    },
-			    conditionalrequired: {
-			        fn: function (value, requirements) {
-			          if (requirements[1] == $(requirements[0]).val() && '' == value)
-			          	return false;
-
-			          return true;
-			        },
-			        priority: 32
-			    },
-			  }
-			};
-		</script>
-		<script src="js/parsley.js"></script>
-		<script type="text/javascript" src="js/site/inscription.js"></script>
-		<script src="js/i18n/fr.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/bootstrap-datepicker.fr.min.js"></script>
     <script src="js/jquery.validate.js"></script>
