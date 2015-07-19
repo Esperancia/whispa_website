@@ -357,11 +357,14 @@ h1.header-program {
 }
 
 .program {
-	background-color: #FFF;
+	background-color: #fff;
 }
 
 form#inscription_form h2 {
 	margin-bottom: 30px;
+}
+label.error {
+  color: #f00;
 }
 .image {
 	margin: 26px 0 38px;
