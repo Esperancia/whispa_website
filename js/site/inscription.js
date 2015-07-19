@@ -1,11 +1,3 @@
-$("#inscription_form").validate({
-  rules: {
-    field: {
-      required: true,
-      number: true
-    }
-  }
-});
 
 $(document).ready(function(){
   var $l = $('.langages');
@@ -40,14 +32,5 @@ $(document).ready(function(){
       startView: 2,
       language: "fr",
       autoclose: true
-  });
-
-  $('#submit').click(function(){
-    if ($('#inscription_form').valid()) {
-      $('#inscription_form').submit(function(){
-        $('#info-envoi').html("Votre inscription a &eacute;t&eacute; enregistr&eacute;e. Nous vous contacterons bient&ocirc;t.");
-        $('#inscription_form').hide();
-      });
-    }
   });
 });
