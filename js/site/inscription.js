@@ -1,3 +1,7 @@
+window.Parsley.on('form:success', function() {
+  $('#info-envoi').html("Votre inscription a &eacute;t&eacute; enregistr&eacute;e. Nous vous contacterons bient&ocirc;t.");
+  $('#inscription_form').hide();
+})
 
 $(document).ready(function(){
   var $l = $('.langages');

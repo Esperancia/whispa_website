@@ -54,8 +54,8 @@
 			<div class="row">
 				<h1 class="text-center">Inscription &agrave; WHISPA</h1>
 					<div class="row text-center" id="info-envoi"></div>
-					<iframe src="" id="my_iframe" name="my_iframe"></iframe>
-					<form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription_form" action="https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse" method="POST" target="my_iframe">
+          <iframe name="my_iframe" id="my_iframe" style="display:none;"></iframe>
+          <form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription_form" action="https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse" method="POST" target="my_iframe" data-parsley-validate>
             <h2>Informations personnelles</h2>
             <div class="form-group">
               <label for="name">Nom et pr&eacute;noms:</label>
@@ -193,7 +193,7 @@
               <textarea name="entry.1205715919" id="avenir" class="form-control" required></textarea>
             </div>
             <p>
-				  		<button id="submit" class="btnRose btnContact" type="submit">Envoyer</button>
+              <input id="submit" class="btnRose btnContactmsubmit" type="submit" value="Envoyer">
 					  </p>
 					</form>
 				</div>
@@ -229,6 +229,8 @@
 		<script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/bootstrap-datepicker.fr.min.js"></script>
-    <script src="js/site/inscription.js"></script>
+		<script src="js/parsley.js"></script>
+    <script type="text/javascript" src="js/site/inscription.js"></script>
+		<script src="js/i18n/fr.js"></script>
 	</body>
 </html>
