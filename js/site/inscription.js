@@ -32,7 +32,7 @@ $(document).ready(function(){
     }
   });
   $('#date').datepicker({
-      format: "dd MM yyyy",
+      format: "yyyy-mm-dd",
       startView: 2,
       language: "fr",
       autoclose: true
