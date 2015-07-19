@@ -35,6 +35,12 @@ $(document).ready(function(){
       $('#connaissance3a').prop('required',false);
     }
   });
+  $('#date').datepicker({
+      format: "dd MM yyyy",
+      startView: 2,
+      language: "fr",
+      autoclose: true
+  });
 
   $('#submit').click(function(){
     if ($('#inscription_form').valid()) {
